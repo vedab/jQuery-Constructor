@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+
+	<meta name="description" content="Mimic jQuery Constructor">
+	<meta name="keywords" content="JavaScript, jQuery">
+	<meta name="author" content="Veda Balan Rajapandian">
+
+	<title>Mimic - jQuery Constructor</title>
+	<script src="../src/jquery-like-m1.js" type="text/javascript" charset="utf-8"></script>
+	<script src="../src/jquery-like-m2.js" type="text/javascript" charset="utf-8"></script>
+
+	<style>
+		.container {padding: 5px; border: 3px solid #f3f3f3; margin: 5px; float:left}
+		.green-text {color:green}
+		.blue-text {color:blue}
+	</style>
+</head>
+
+<body>
+<h1> Mimic the jQuery Constructor </h1>
+
+<div class="container method1">
+	<div id="m1El">Method 1 : Some content</div>
+	<input type="text" value="" name="m1Text">
+	<div class="green-text">Green Text</div>
+</div>
+
+<script type="text/javascript">
+
+//jQuery Like Method 1
+console.log($1("#m1El").html());
+$1("input").val("Earlier content: "+ $1("#m1El").html());
+console.log($1(".green-text").html("Green text changed to Red text!!").css("color","red").html());
+
+</script>
+
+
+<div class="container method2">
+	<div id="m2El">Method 2 : Some content</div>
+	<input type="text" value="" name="m2Text">
+	<div class="blue-text">Blue Text</div>
+</div>
+
+<script type="text/javascript">
+
+//jQuery Like Method 2
+console.log($2("#m2El").html());
+$2("input").get(1).val("Earlier content: "+ $2("#m2El").html());
+console.log($2(".blue-text").html("Blue text changed to Yello text!!").css("color","yellow").css("font-weight","800").html());
+</script>
+
+</body>
+</html>
